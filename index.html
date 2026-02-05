@@ -15,7 +15,7 @@
       --surface: #ffffff;
       --text: #1f2933;
       --muted: #6b7280;
-      --accent: #1e3a8a; /* deep blue */
+      --accent: #1e3a8a;
       --border: #e5e7eb;
     }
 
@@ -77,7 +77,6 @@
       margin-bottom: 5rem;
     }
 
-    /* Full-width section headers */
     .section-header {
       background: var(--accent);
       color: #ffffff;
@@ -102,12 +101,24 @@
       display: grid;
       grid-template-columns: 1.4fr 1fr;
       gap: 3rem;
+      align-items: center;
     }
 
     @media (max-width: 900px) {
       .grid {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* ✅ PROFILE IMAGE SCALING */
+    .image {
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: 0 28px 56px rgba(0, 0, 0, 0.15);
+      justify-self: center;
     }
 
     .image-placeholder {
@@ -173,7 +184,6 @@
 
 <main>
 
-  <!-- About -->
   <section id="about">
     <div class="section-header">
       <h2>About Me</h2>
@@ -183,35 +193,22 @@
       <div>
         <p>
           I am Levi Crow, based in Springfield, MO, with a strong interest in cybersecurity,
-          infrastructure, and defensive technologies. I enjoy understanding how systems work,
-          identifying weaknesses, and improving reliability and security.
+          infrastructure, and defensive technologies.
         </p>
         <p>
           My background in customer service has strengthened my communication skills and ability
-          to collaborate effectively across teams — especially when translating technical concepts
-          to non-technical audiences.
+          to collaborate effectively across teams.
         </p>
       </div>
 
       <img
         src="Images/Levi_website_pic.jpg"
-        alt="This is Me:"
+        alt="Portrait of Levi Crow"
         class="image"
-        
-      .profile-image {
-  width: 100%;
-  max-width: 360px;   /* controls how big it can get */
-  height: auto;       /* preserves aspect ratio */
-  border-radius: 24px;
-  object-fit: cover;
-  box-shadow: 0 24px 48px rgba(0,0,0,0.15);
-}
->
-      </div>
+      >
     </div>
   </section>
 
-  <!-- Skills -->
   <section id="skills">
     <div class="section-header">
       <h2>Technical Experience</h2>
@@ -240,7 +237,6 @@
     </div>
   </section>
 
-  <!-- Training -->
   <section id="training">
     <div class="section-header">
       <h2>Training & Education</h2>
@@ -264,7 +260,6 @@
     </div>
   </section>
 
-  <!-- Volunteering -->
   <section id="volunteering">
     <div class="section-header">
       <h2>Volunteering & Community</h2>
@@ -285,7 +280,7 @@
 </main>
 
 <footer>
-    © 2026 Levi Crow. All rights reserved.
+  © 2026 Levi Crow. All rights reserved.
 </footer>
 
 </body>
