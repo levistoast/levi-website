@@ -1,264 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Levi Crow | Cybersecurity & IT</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>Levi Crow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Levi Crow — Cybersecurity & IT Professional" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --accent: #e11d48;   /* light red */
-            --text: #1f2933;
-            --muted: #6b7280;
-            --border: #e5e7eb;
-            --bg: #ffffff;
-        }
+  <style>
+    :root {
+      --bg-deep: #0b1324;
+      --bg-overlay: rgba(11, 19, 36, 0.65);
+      --surface: #ffffff;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --accent: #1e3a8a; /* deep blue */
+      --border: #e5e7eb;
+    }
 
-        * {
-            box-sizing: border-box;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.7;
-        }
+    body {
+      font-family: 'Inter', sans-serif;
+      background:
+        linear-gradient(180deg, rgba(30,58,138,0.35), transparent 45%),
+        radial-gradient(900px 500px at 70% -10%, rgba(30,58,138,0.35), transparent),
+        var(--bg-deep);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-        }
+    header {
+      text-align: center;
+      padding: 6rem 1.5rem 4rem;
+      color: #ffffff;
+    }
 
-        header {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 3rem;
-            align-items: center;
-            margin-bottom: 5rem;
-        }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.75rem;
+    }
 
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
+    header p {
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      color: #d1d5db;
+      font-size: 1.15rem;
+    }
 
-        header h1 span {
-            color: var(--accent);
-        }
+    nav a {
+      margin: 0 0.75rem;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      opacity: 0.9;
+    }
 
-        header p {
-            font-size: 1.1rem;
-            color: var(--muted);
-            max-width: 520px;
-        }
+    nav a:hover {
+      opacity: 1;
+    }
 
-        .image-placeholder {
-            width: 100%;
-            height: 280px;
-            border: 2px dashed var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
 
-        section {
-            margin-bottom: 4.5rem;
-        }
+    section {
+      margin-bottom: 5rem;
+    }
 
-        section h2 {
-            font-size: 1.9rem;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--accent);
-            padding-left: 0.75rem;
-        }
+    /* Full-width section headers */
+    .section-header {
+      background: var(--accent);
+      color: #ffffff;
+      padding: 1.75rem 1.5rem;
+      margin: 0 -1.5rem 2.5rem;
+    }
 
-        .two-column {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
+    .section-header h2 {
+      font-size: 2.1rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
 
-        ul {
-            padding-left: 1.2rem;
-        }
+    .card {
+      background: var(--surface);
+      border-radius: 24px;
+      padding: 2rem;
+      border: 1px solid var(--border);
+    }
 
-        li {
-            margin-bottom: 0.5rem;
-        }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 3rem;
+    }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-        }
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
-        .skill-box {
-            border: 1px solid var(--border);
-            padding: 0.9rem 1rem;
-            font-size: 0.95rem;
-        }
+    .image-placeholder {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      border: 2px dashed var(--border);
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      background: #f9fafb;
+    }
 
-        .card {
-            border: 1px solid var(--border);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
 
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            font-size: 0.85rem;
-        }
+    .skill {
+      background: #f9fafb;
+      padding: 0.9rem 1rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
 
-        @media (max-width: 900px) {
-            header {
-                grid-template-columns: 1fr;
-            }
+    ul {
+      padding-left: 1.2rem;
+    }
 
-            .two-column {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <h1>Levi Crow</h1>
+  <p>
+    Cybersecurity & IT professional based in Springfield, Missouri — driven by curiosity,
+    passionate about technological innovation, and grounded by years of customer service experience.
+  </p>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#training">Training</a>
+    <a href="#volunteering">Volunteering</a>
+  </nav>
+</header>
 
-    <!-- Header -->
-    <header>
-        <div>
-            <h1>Levi <span>Crow</span></h1>
-            <p>
-                Cybersecurity and IT professional based in Springfield, Missouri.
-                Driven by curiosity, passionate about technological innovation, and
-                grounded by years of customer service experience.
-            </p>
-        </div>
+<main>
 
-        <!-- Profile Image Placeholder -->
-        <div class="image-placeholder">
-            Profile Photo Placeholder
-        </div>
-    </header>
+  <!-- About -->
+  <section id="about">
+    <div class="section-header">
+      <h2>About Me</h2>
+    </div>
 
-    <!-- About Me -->
-    <section>
-        <h2>About Me</h2>
-        <div class="two-column">
-            <p>
-                I am Levi Crow, based in Springfield, MO, driven by curiosity and a strong
-                passion for technology and cybersecurity. My background in customer service
-                has shaped my communication skills and ability to work effectively with both
-                technical and non-technical audiences.
-            </p>
+    <div class="card grid">
+      <div>
+        <p>
+          I am Levi Crow, based in Springfield, MO, with a strong interest in cybersecurity,
+          infrastructure, and defensive technologies. I enjoy understanding how systems work,
+          identifying weaknesses, and improving reliability and security.
+        </p>
+        <p>
+          My background in customer service has strengthened my communication skills and ability
+          to collaborate effectively across teams — especially when translating technical concepts
+          to non-technical audiences.
+        </p>
+      </div>
 
-            <!-- About Image Placeholder -->
-            <div class="image-placeholder">
-                About / Personal Image Placeholder
-            </div>
-        </div>
-    </section>
+      <div class="image-placeholder">
+        Profile / Personal Photo Placeholder
+      </div>
+    </div>
+  </section>
 
-    <!-- Technical Experience -->
-    <section>
-        <h2>Technical Experience</h2>
+  <!-- Skills -->
+  <section id="skills">
+    <div class="section-header">
+      <h2>Technical Experience</h2>
+    </div>
 
-        <!-- Lab / Project Image Placeholder -->
-        <div class="image-placeholder" style="margin-bottom: 2rem;">
-            Technical Lab / Project Screenshot Placeholder
-        </div>
+    <div class="card">
+      <div class="image-placeholder" style="margin-bottom: 2rem;">
+        Lab Environment / Project Screenshot Placeholder
+      </div>
 
-        <div class="skills-grid">
-            <div class="skill-box">Active Directory Domain Services</div>
-            <div class="skill-box">Networking Fundamentals & Cabling</div>
-            <div class="skill-box">Azure</div>
-            <div class="skill-box">Python</div>
-            <div class="skill-box">HTML</div>
-            <div class="skill-box">GitHub</div>
-            <div class="skill-box">Docker</div>
-            <div class="skill-box">Linux & Kali Linux</div>
-            <div class="skill-box">Windows Server</div>
-            <div class="skill-box">Security Onion</div>
-            <div class="skill-box">Wireshark</div>
-            <div class="skill-box">pfSense Firewalls</div>
-            <div class="skill-box">OPNsense Firewalls</div>
-            <div class="skill-box">Palo Alto Firewalls</div>
-        </div>
-    </section>
+      <div class="skills">
+        <div class="skill">Active Directory Domain Services</div>
+        <div class="skill">Networking Fundamentals & Cabling</div>
+        <div class="skill">Azure</div>
+        <div class="skill">Python</div>
+        <div class="skill">HTML</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Docker</div>
+        <div class="skill">Linux & Kali Linux</div>
+        <div class="skill">Windows Server</div>
+        <div class="skill">Security Onion</div>
+        <div class="skill">Wireshark</div>
+        <div class="skill">pfSense & OPNsense Firewalls</div>
+        <div class="skill">Palo Alto Firewalls</div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Personal Skills -->
-    <section>
-        <h2>Professional & Personal Skills</h2>
+  <!-- Training -->
+  <section id="training">
+    <div class="section-header">
+      <h2>Training & Education</h2>
+    </div>
 
-        <!-- Skills Image Placeholder -->
-        <div class="image-placeholder" style="margin-bottom: 2rem;">
-            Team / Presentation Image Placeholder
-        </div>
+    <div class="card">
+      <p><strong>Associate of Applied Science — Cybersecurity</strong><br>
+      Ozark Technical Community College</p>
 
-        <ul>
-            <li>Leadership & Team-Building</li>
-            <li>Time Management</li>
-            <li>Flexible Project Management</li>
-            <li>Public Speaking</li>
-            <li>Clear and Effective Communication</li>
-        </ul>
-    </section>
+      <p><strong>Certifications</strong><br>
+      CompTIA Network+</p>
 
-    <!-- Training & Education -->
-    <section>
-        <h2>Training & Education</h2>
+      <p><strong>Additional Experience</strong><br>
+      Udemy Python Courses<br>
+      Apprenticeship at MCCoE<br>
+      Collegiate Cybersecurity Defence Club Participant</p>
 
-        <div class="card">
-            <p><strong>Associate of Applied Science – Cybersecurity</strong><br>
-            Ozark Technical Community College</p>
+      <div class="image-placeholder" style="margin-top: 2rem;">
+        Education / Certification Image Placeholder
+      </div>
+    </div>
+  </section>
 
-            <p><strong>Certifications</strong><br>
-            CompTIA Network+</p>
+  <!-- Volunteering -->
+  <section id="volunteering">
+    <div class="section-header">
+      <h2>Volunteering & Community</h2>
+    </div>
 
-            <p><strong>Additional Training</strong><br>
-            Udemy Python Courses<br>
-            Apprenticeship at MCCoE<br>
-            Participant, Collegiate Cybersecurity Defence Club</p>
-        </div>
+    <div class="card grid">
+      <ul>
+        <li>Built houses in Nicaragua for the local dump community</li>
+        <li>Distributed food to the homeless with the Salvation Army</li>
+      </ul>
 
-        <!-- Education Image Placeholder -->
-        <div class="image-placeholder">
-            Education / Certification Image Placeholder
-        </div>
-    </section>
+      <div class="image-placeholder">
+        Volunteer Work Photo Placeholder
+      </div>
+    </div>
+  </section>
 
-    <!-- Volunteering -->
-    <section>
-        <h2>Volunteering & Community Involvement</h2>
-
-        <div class="two-column">
-            <ul>
-                <li>Built houses in Nicaragua for the local dump community</li>
-                <li>Distributed food to the homeless with the Salvation Army</li>
-            </ul>
-
-            <!-- Volunteer Image Placeholder -->
-            <div class="image-placeholder">
-                Volunteer Work Image Placeholder
-            </div>
-        </div>
-    </section>
-
-</div>
+</main>
 
 <section>
     <h2>Contact</h2>
